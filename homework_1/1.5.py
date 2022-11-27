@@ -1,9 +1,10 @@
 #Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
 
-#                    - x=34; y=-30 -> 4
-#Пример:
+from math import sqrt
 
-#                    - x=34; y=-30 -> 4
-#                - A (3,6); B (2,1) -> 5,09
-#                    - x=34; y=-30 -> 4
-#                - A (7,-5); B (1,-1) -> 7,21
+coordinates_A = [(float(input('Введите значение X для точки А: '))), (float(input('Введите значение Y для точки А: ')))]
+coordinates_B = [(float(input('Введите значение X для точки B: '))), (float(input('Введите значение Y для точки B: ')))]
+
+distance = sqrt((coordinates_A[0]-coordinates_B[0])**2 + (coordinates_A[1]-coordinates_B[1])**2)
+
+print(round(distance, 2))
